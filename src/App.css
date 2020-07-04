@@ -42,8 +42,11 @@ input {
   padding: 5px 10px;
 }
 
-button{
+button {
   border-radius: 3px;
   border: 1px solid white;
-  padding: 5px;
+  padding: 5px 15px;
+  background-color: black;
+  color: rgb(226, 241, 9);
+  font-weight: bolder;
 }
