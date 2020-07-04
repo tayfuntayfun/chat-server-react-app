@@ -28,17 +28,17 @@ const postMessage = () => {
         <div>
           <form >
           <p>
-            Name____:{" "}
+            
             <input
               className="input-name" type="text" placeholder="Your Name"
          
             />{" "}
             <br />
-            Message_:{" "}
+            
             <input
               className="input-message"
               type="text"
-              placeholder="The message..."
+              placeholder="Chat here..."
              
             />
             <br />
