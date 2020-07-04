@@ -2,8 +2,7 @@ import React from "react";
 
 const chatBoxes = ({ messages }) => {
   return (
-    <div className="chat-boxes"
-            style={{ color: "white" }}>
+    <div className="chat-boxes">
       {messages.map((message) => (
         <div className="chat-boxes">
           <div key={message.id}>
