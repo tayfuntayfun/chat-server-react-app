@@ -5,8 +5,11 @@ background-color: black;
 .App {
   text-align: center;
   background-color: rgb(15, 15, 0);
-  height: 600px;
-  color: white
+  height: 98%;
+  color: white;
+  width: 97%;
+  margin: auto;
+  border: 2px solid white;
 }
 
 input {
@@ -15,3 +18,24 @@ input {
   margin: 5px;
 }
 
+.chat-boxes{
+  margin-left: 20px;
+}
+
+.chat-boxes-name, .chat-boxes-time{
+ text-align: left;
+ margin-bottom: 3px;
+ color: rgb(182, 182, 150);
+}
+
+.message-text{
+  margin-top: 5px;
+  text-align: left;
+}
+.chat-boxes-text{
+  background-color: rgb(33, 34, 31);
+  border-radius: 10px;
+  height: 60px;
+  width: 350px;
+  padding: 5px 10px;
+}

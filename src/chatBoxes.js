@@ -2,15 +2,17 @@ import React from "react";
 
 const chatBoxes = ({ messages }) => {
   return (
-    <div style={{ color: "white" }}>
+    <div className="chat-boxes"
+            style={{ color: "white" }}>
       {messages.map((message) => (
-        <div>
+        <div className="chat-boxes">
           <div key={message.id}>
-            <h5>{message.from}</h5>
-            <div>
-              <p>{message.text}</p>
+            <h4 className="chat-boxes-name">{message.from}</h4>
+            <div className="chat-boxes-text">
+              <p className="message-text">{message.text}</p>
             </div>
-            <div>{message.timeSent}</div>
+            <div className="chat-boxes-time"
+                style={{ fontSize: "10px" }}>{message.timeSent}</div>
           </div>
         </div>
       ))}
