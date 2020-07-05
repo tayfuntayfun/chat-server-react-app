@@ -6,7 +6,7 @@ background-color: black;
   text-align: center;
   background-color: rgb(15, 15, 0);
   height: 98%;
-  color: white;
+  color: rgb(241, 235, 235);
   width: 97%;
   margin: auto;
   border: 2px solid white;
@@ -35,7 +35,7 @@ input {
 }
 
 .chat-boxes-text{
-  background-color: rgb(33, 34, 31);
+  background-color: rgb(10, 10, 10);
   border-radius: 10px;
   height: 60px;
   width: 30%;
