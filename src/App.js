@@ -13,12 +13,13 @@ function App() {
     fetch(apiRoot)
       .then((res) => res.json())
       .then((data) => {setMessages(data)});
-  }, []);
+  }, [messages]);
 
   return (
     <div className="App">
       <h1><i>Chatter</i></h1>
       <PostMessage apiRoot = {apiRoot} />
+
       <ChatBoxes messages={messages}  />
     </div>
   )

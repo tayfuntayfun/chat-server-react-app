@@ -1,4 +1,4 @@
 
-const apiRoot = "https://tayfun-chat-server.glitch.me/messages";
+const apiRoot = "https://tayfun-chat-server.herokuapp.com/messages";
 
 export default apiRoot
