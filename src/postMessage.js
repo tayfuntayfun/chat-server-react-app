@@ -10,6 +10,7 @@ const postMessage = () => {
     
     fetch(apiRoot, {
       method: "POST",
+      mode: "cors",
       headers: {
         "Content-type": "application/json",
       },
@@ -27,19 +28,15 @@ const postMessage = () => {
   return (
         <div>
           <form >
-          <p>
-            
+          <p>  
             <input
               className="input-name" type="text" placeholder="Your Name"
-         
-            />{" "}
+            />
             <br />
-            
             <input
               className="input-message"
               type="text"
               placeholder="Chat here..."
-             
             />
             <br />
           </p>
