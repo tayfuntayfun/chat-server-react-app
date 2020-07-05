@@ -4,12 +4,13 @@ background-color: black;
 
 .App {
   text-align: center;
-  background-color: rgb(15, 15, 0);
-  height: 98%;
+  background-color: rgb(7, 7, 4);
+  height: 900px;
   color: rgb(241, 235, 235);
   width: 97%;
   margin: auto;
   border: 2px solid white;
+  margin-top: 10px;
 }
 
 input {
