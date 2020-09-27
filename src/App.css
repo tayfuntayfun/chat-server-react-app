@@ -1,5 +1,5 @@
-body{
-background-color: black;
+body {
+  background-color: black;
 }
 
 .App {
@@ -14,42 +14,44 @@ background-color: black;
 }
 
 input {
-  width: 50%;
-  height: 25px;
+  width: 20%;
+  height: 50px;
   margin: 5px;
+  overflow: auto;
 }
 
-.chat-boxes{
+.chat-boxes {
   margin-left: 20px;
-  color: "white" 
+  color: "white";
 }
 
-.chat-boxes-name, .chat-boxes-time{
- text-align: left;
- margin-bottom: 3px;
- color: rgb(182, 182, 150);
+.chat-boxes-name,
+.chat-boxes-time {
+  text-align: left;
+  margin-bottom: 3px;
+  color: rgb(182, 182, 150);
 }
 
-.chat-boxes-time{
+.chat-boxes-time {
   margin-left: 400px;
 }
 
-.message-text{
+.message-text {
   margin-top: 5px;
   text-align: left;
 }
 
-.chat-boxes-text{
+.chat-boxes-text {
   background-color: rgb(10, 10, 10);
   border-radius: 10px;
   height: 40px;
   width: 30%;
   padding: 5px 10px;
-  border: 1px solid whitesmoke
+  border: 1px solid whitesmoke;
 }
 
 @media only screen and (max-width: 600px) {
-  .chat-boxes-text{
+  .chat-boxes-text {
     margin: auto;
     width: 80%;
   }

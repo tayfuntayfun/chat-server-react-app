@@ -1,51 +1,61 @@
-import React from "react";
+import React, { useState } from "react";
 import apiRoot from "./apiRoot";
+import { v4 as uuidv4 } from "uuid";
 
+const PostMessage = ({ updateChatHistory }) => {
+  const [newChat, setNewChat] = useState({
+    id: uuidv4(),
+    from: "",
+    text: "",
+    time: Date.now(),
+  });
 
-//{ handleOnChange, handleSubmit}
+  const options = {
+    method: "POST",
+    mode: "cors",
+    headers: {
+      "Content-type": "application/json",
+    },
+    body: JSON.stringify(newChat),
+  };
 
-const postMessage = () => {
-
-  const handleAddNew = () => {
-    
-    fetch(apiRoot, {
-      method: "POST",
-      mode: "cors",
-      headers: {
-        "Content-type": "application/json",
-      },
-      body: JSON.stringify({
-        from: document.querySelector(".input-name").value,
-        text: document.querySelector(".input-message").value,
-      }),
-    })
+  const handleSubmit = () => {
+    fetch(apiRoot, options)
       .then((res) => res.json())
-      .then(() => {
-        console.log("Message Added");
-      });
-  }
-  
-  return (
-        <div>
-          <form >
-          <p>  
-            <input
-              className="input-name" type="text" placeholder="Your Name"
-            />
-            <br />
-            <input
-              className="input-message"
-              type="text"
-              placeholder="Chat here..."
-            />
-            <br />
-          </p>
-          <button onClick={() => handleAddNew()} type="submit">
-            Send
-          </button>
-        </form>
-      </div>
-  );
-}
+      .catch((error) => console.log(error))
+      .then(() => updateChatHistory());
+  };
 
-export default postMessage;
+  const handleChange = (e) => {
+    setNewChat({ ...newChat, [e.target.name]: e.target.value });
+    console.log(newChat);
+  };
+
+  return (
+    <div>
+      <form>
+        <input
+          name="from"
+          className="input-name"
+          type="text"
+          placeholder="Your Name"
+          onChange={handleChange}
+        />
+        <br />
+        <input
+          name="text"
+          className="input-message"
+          type="text"
+          placeholder="Chat here..."
+          onChange={handleChange}
+        />
+        <br />
+        <button onClick={handleSubmit} type="submit">
+          Send
+        </button>
+      </form>
+    </div>
+  );
+};
+
+export default PostMessage;
