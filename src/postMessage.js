@@ -22,8 +22,8 @@ const PostMessage = ({ updateChatHistory }) => {
   const handleSubmit = () => {
     fetch(apiRoot, options)
       .then((res) => res.json())
-      .catch((error) => console.log(error))
-      .then(() => updateChatHistory());
+      .catch((error) => console.log(error));
+    updateChatHistory();
   };
 
   const handleChange = (e) => {
